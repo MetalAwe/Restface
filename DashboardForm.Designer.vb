@@ -115,7 +115,7 @@ Partial Class DashboardForm
         ButtonMasa1.BackgroundImage = CType(resources.GetObject("ButtonMasa1.BackgroundImage"), Image)
         ButtonMasa1.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa1.Location = New Point(29, 37)
-        ButtonMasa1.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa1.Margin = New Padding(2)
         ButtonMasa1.Name = "ButtonMasa1"
         ButtonMasa1.Size = New Size(143, 61)
         ButtonMasa1.TabIndex = 13
@@ -126,7 +126,7 @@ Partial Class DashboardForm
         Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), Image)
         Button2.BackgroundImageLayout = ImageLayout.Zoom
         Button2.Location = New Point(209, 37)
-        Button2.Margin = New Padding(2, 2, 2, 2)
+        Button2.Margin = New Padding(2)
         Button2.Name = "Button2"
         Button2.Size = New Size(143, 61)
         Button2.TabIndex = 14
@@ -137,7 +137,7 @@ Partial Class DashboardForm
         ButtonMasa2.BackgroundImage = CType(resources.GetObject("ButtonMasa2.BackgroundImage"), Image)
         ButtonMasa2.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa2.Location = New Point(209, 37)
-        ButtonMasa2.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa2.Margin = New Padding(2)
         ButtonMasa2.Name = "ButtonMasa2"
         ButtonMasa2.Size = New Size(143, 61)
         ButtonMasa2.TabIndex = 14
@@ -148,7 +148,7 @@ Partial Class DashboardForm
         ButtonMasa3.BackgroundImage = CType(resources.GetObject("ButtonMasa3.BackgroundImage"), Image)
         ButtonMasa3.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa3.Location = New Point(390, 37)
-        ButtonMasa3.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa3.Margin = New Padding(2)
         ButtonMasa3.Name = "ButtonMasa3"
         ButtonMasa3.Size = New Size(143, 61)
         ButtonMasa3.TabIndex = 15
@@ -159,7 +159,7 @@ Partial Class DashboardForm
         ButtonMasa4.BackgroundImage = CType(resources.GetObject("ButtonMasa4.BackgroundImage"), Image)
         ButtonMasa4.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa4.Location = New Point(29, 157)
-        ButtonMasa4.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa4.Margin = New Padding(2)
         ButtonMasa4.Name = "ButtonMasa4"
         ButtonMasa4.Size = New Size(143, 61)
         ButtonMasa4.TabIndex = 16
@@ -170,7 +170,7 @@ Partial Class DashboardForm
         ButtonMasa5.BackgroundImage = CType(resources.GetObject("ButtonMasa5.BackgroundImage"), Image)
         ButtonMasa5.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa5.Location = New Point(209, 157)
-        ButtonMasa5.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa5.Margin = New Padding(2)
         ButtonMasa5.Name = "ButtonMasa5"
         ButtonMasa5.Size = New Size(143, 61)
         ButtonMasa5.TabIndex = 17
@@ -181,7 +181,7 @@ Partial Class DashboardForm
         ButtonMasa6.BackgroundImage = CType(resources.GetObject("ButtonMasa6.BackgroundImage"), Image)
         ButtonMasa6.BackgroundImageLayout = ImageLayout.Zoom
         ButtonMasa6.Location = New Point(390, 157)
-        ButtonMasa6.Margin = New Padding(2, 2, 2, 2)
+        ButtonMasa6.Margin = New Padding(2)
         ButtonMasa6.Name = "ButtonMasa6"
         ButtonMasa6.Size = New Size(143, 61)
         ButtonMasa6.TabIndex = 18
@@ -190,7 +190,7 @@ Partial Class DashboardForm
         ' ButtonLogout
         ' 
         ButtonLogout.Location = New Point(17, 9)
-        ButtonLogout.Margin = New Padding(2, 2, 2, 2)
+        ButtonLogout.Margin = New Padding(2)
         ButtonLogout.Name = "ButtonLogout"
         ButtonLogout.Size = New Size(78, 20)
         ButtonLogout.TabIndex = 19
@@ -217,9 +217,14 @@ Partial Class DashboardForm
         Controls.Add(LabelMasa2)
         Controls.Add(LabelMasa1)
         Controls.Add(LabelDashboard)
-        Margin = New Padding(2, 2, 2, 2)
+        Margin = New Padding(2)
+        MaximizeBox = False
+        MaximumSize = New Size(576, 309)
+        MinimizeBox = False
+        MinimumSize = New Size(576, 309)
         Name = "DashboardForm"
         ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Dashboard"
         ResumeLayout(False)
         PerformLayout()

@@ -36,88 +36,50 @@ Partial Class Form1
         ' 
         ' LabelUsername
         ' 
-        LabelUsername.AutoSize = True
-        LabelUsername.Location = New Point(19, 21)
-        LabelUsername.Margin = New Padding(2, 0, 2, 0)
+        resources.ApplyResources(LabelUsername, "LabelUsername")
         LabelUsername.Name = "LabelUsername"
-        LabelUsername.Size = New Size(60, 15)
-        LabelUsername.TabIndex = 0
-        LabelUsername.Text = "Username"
         ' 
         ' TextBoxUsername
         ' 
-        TextBoxUsername.Location = New Point(21, 44)
-        TextBoxUsername.Margin = New Padding(2)
+        resources.ApplyResources(TextBoxUsername, "TextBoxUsername")
         TextBoxUsername.Name = "TextBoxUsername"
-        TextBoxUsername.Size = New Size(106, 23)
-        TextBoxUsername.TabIndex = 1
         ' 
         ' LabelPassword
         ' 
-        LabelPassword.AutoSize = True
-        LabelPassword.Location = New Point(19, 75)
-        LabelPassword.Margin = New Padding(2, 0, 2, 0)
+        resources.ApplyResources(LabelPassword, "LabelPassword")
         LabelPassword.Name = "LabelPassword"
-        LabelPassword.Size = New Size(57, 15)
-        LabelPassword.TabIndex = 2
-        LabelPassword.Text = "Password"
         ' 
         ' TextBoxPassword
         ' 
-        TextBoxPassword.Location = New Point(19, 99)
-        TextBoxPassword.Margin = New Padding(2)
+        resources.ApplyResources(TextBoxPassword, "TextBoxPassword")
         TextBoxPassword.Name = "TextBoxPassword"
-        TextBoxPassword.PasswordChar = "*"c
-        TextBoxPassword.Size = New Size(106, 23)
-        TextBoxPassword.TabIndex = 3
         ' 
         ' ButtonLogin
         ' 
-        ButtonLogin.Location = New Point(19, 133)
-        ButtonLogin.Margin = New Padding(2)
+        resources.ApplyResources(ButtonLogin, "ButtonLogin")
         ButtonLogin.Name = "ButtonLogin"
-        ButtonLogin.Size = New Size(78, 20)
-        ButtonLogin.TabIndex = 4
-        ButtonLogin.Text = "Login"
         ButtonLogin.UseVisualStyleBackColor = True
         ' 
         ' LabelMessage
         ' 
-        LabelMessage.AutoSize = True
-        LabelMessage.Location = New Point(19, 167)
-        LabelMessage.Margin = New Padding(2, 0, 2, 0)
+        resources.ApplyResources(LabelMessage, "LabelMessage")
         LabelMessage.Name = "LabelMessage"
-        LabelMessage.Size = New Size(41, 15)
-        LabelMessage.TabIndex = 5
-        LabelMessage.Text = "Label1"
-        LabelMessage.Visible = False
         ' 
         ' LabelLogo
         ' 
-        LabelLogo.AutoSize = True
-        LabelLogo.Location = New Point(285, 195)
-        LabelLogo.Margin = New Padding(2, 0, 2, 0)
+        resources.ApplyResources(LabelLogo, "LabelLogo")
         LabelLogo.Name = "LabelLogo"
-        LabelLogo.Size = New Size(234, 15)
-        LabelLogo.TabIndex = 7
-        LabelLogo.Text = "RestFace - Restaurant Interface System v0.1"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(248, 11)
-        PictureBox1.Margin = New Padding(2)
+        resources.ApplyResources(PictureBox1, "PictureBox1")
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(301, 182)
-        PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(560, 227)
         Controls.Add(PictureBox1)
         Controls.Add(LabelLogo)
         Controls.Add(LabelMessage)
@@ -126,10 +88,10 @@ Partial Class Form1
         Controls.Add(LabelPassword)
         Controls.Add(TextBoxUsername)
         Controls.Add(LabelUsername)
-        Margin = New Padding(2)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "Form1"
         ShowIcon = False
-        Text = "Log In"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

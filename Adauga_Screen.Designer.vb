@@ -34,7 +34,7 @@ Partial Class Adauga_Screen
         ' TextBox1
         ' 
         TextBox1.Location = New Point(52, 140)
-        TextBox1.Margin = New Padding(2, 2, 2, 2)
+        TextBox1.Margin = New Padding(2)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(106, 23)
         TextBox1.TabIndex = 0
@@ -43,7 +43,7 @@ Partial Class Adauga_Screen
         ' 
         RadioBautura.AutoSize = True
         RadioBautura.Location = New Point(52, 89)
-        RadioBautura.Margin = New Padding(2, 2, 2, 2)
+        RadioBautura.Margin = New Padding(2)
         RadioBautura.Name = "RadioBautura"
         RadioBautura.Size = New Size(66, 19)
         RadioBautura.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class Adauga_Screen
         RadioMancare.AutoSize = True
         RadioMancare.Checked = True
         RadioMancare.Location = New Point(52, 68)
-        RadioMancare.Margin = New Padding(2, 2, 2, 2)
+        RadioMancare.Margin = New Padding(2)
         RadioMancare.Name = "RadioMancare"
         RadioMancare.Size = New Size(71, 19)
         RadioMancare.TabIndex = 2
@@ -86,7 +86,7 @@ Partial Class Adauga_Screen
         ' ButtonInapoi
         ' 
         ButtonInapoi.Location = New Point(8, 7)
-        ButtonInapoi.Margin = New Padding(2, 2, 2, 2)
+        ButtonInapoi.Margin = New Padding(2)
         ButtonInapoi.Name = "ButtonInapoi"
         ButtonInapoi.Size = New Size(78, 20)
         ButtonInapoi.TabIndex = 5
@@ -96,7 +96,7 @@ Partial Class Adauga_Screen
         ' ButtonAccepta
         ' 
         ButtonAccepta.Location = New Point(228, 155)
-        ButtonAccepta.Margin = New Padding(2, 2, 2, 2)
+        ButtonAccepta.Margin = New Padding(2)
         ButtonAccepta.Name = "ButtonAccepta"
         ButtonAccepta.Size = New Size(78, 20)
         ButtonAccepta.TabIndex = 6
@@ -115,9 +115,14 @@ Partial Class Adauga_Screen
         Controls.Add(RadioMancare)
         Controls.Add(RadioBautura)
         Controls.Add(TextBox1)
-        Margin = New Padding(2, 2, 2, 2)
+        Margin = New Padding(2)
+        MaximizeBox = False
+        MaximumSize = New Size(339, 229)
+        MinimizeBox = False
+        MinimumSize = New Size(339, 229)
         Name = "Adauga_Screen"
         ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Adauga aliment"
         ResumeLayout(False)
         PerformLayout()

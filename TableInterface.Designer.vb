@@ -40,6 +40,7 @@ Partial Class TableInterface
         ButtonSterge = New Button()
         Label1 = New Label()
         LabelEroare = New Label()
+        LabelNrMasa = New Label()
         SuspendLayout()
         ' 
         ' ButtonInapoi
@@ -170,11 +171,21 @@ Partial Class TableInterface
         LabelEroare.Text = "Label2"
         LabelEroare.Visible = False
         ' 
+        ' LabelNrMasa
+        ' 
+        LabelNrMasa.AutoSize = True
+        LabelNrMasa.Location = New Point(181, 10)
+        LabelNrMasa.Name = "LabelNrMasa"
+        LabelNrMasa.Size = New Size(38, 15)
+        LabelNrMasa.TabIndex = 34
+        LabelNrMasa.Text = "Masa:"
+        ' 
         ' TableInterface
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(420, 270)
+        Controls.Add(LabelNrMasa)
         Controls.Add(LabelEroare)
         Controls.Add(Label1)
         Controls.Add(ButtonSterge)
@@ -187,8 +198,13 @@ Partial Class TableInterface
         Controls.Add(RadioButtonCash)
         Controls.Add(ButtonInapoi)
         Margin = New Padding(2)
+        MaximizeBox = False
+        MaximumSize = New Size(436, 309)
+        MinimizeBox = False
+        MinimumSize = New Size(436, 309)
         Name = "TableInterface"
         ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Table Interface"
         ResumeLayout(False)
         PerformLayout()
@@ -211,4 +227,5 @@ Partial Class TableInterface
     Friend WithEvents ButtonSterge As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents LabelEroare As Label
+    Friend WithEvents LabelNrMasa As Label
 End Class

@@ -8,23 +8,21 @@ Public Class TableInterface
         Dashboard.Show()
     End Sub
 
-    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
-        If TreeView1.SelectedNode.Text <> "Mancare" AndAlso TreeView1.SelectedNode.Text <> "Bauturi" Then
-            ListBoxCheck.Items.Add(TreeView1.SelectedNode.Text)
-        End If
-    End Sub
-
     Private Sub ButtonPlata_Click(sender As Object, e As EventArgs) Handles ButtonPlata.Click
         My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", "---Bon Fiscal---" + Environment.NewLine + "'Artists Pub' SRL" + Environment.NewLine + "Municipiul Bucuresti" + Environment.NewLine + "str. Lt. Gh. Saidac Nr.7" + Environment.NewLine + "***" + Environment.NewLine, False)
         Dim RadioButtonsData As Boolean = RadioButtonCard.Checked
+        Dim i As Integer
+        For i = 0 To ListBoxCheck.Items.Count - 1
+            My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", ListBoxCheck.Items(i).ToString() + Environment.NewLine, True)
+        Next
+        My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", "***" + Environment.NewLine, True)
         If RadioButtonsData = False Then
             My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", "Plata CASH" + Environment.NewLine, True)
         Else
             My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", "Plata CARD" + Environment.NewLine, True)
         End If
-        Dim BonFiscal As New BonFiscal
-        BonFiscal.Show()
-        Me.Hide()
+        My.Computer.FileSystem.WriteAllText("Bon_Fiscal.txt", LabelNrMasa.Text + Environment.NewLine, True)
+        MessageBox.Show("Bonul fiscal a fost generat cu succes!", "Bon Fiscal", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub TableInterface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -91,5 +89,11 @@ Public Class TableInterface
             LabelEroare.Text = "Nu ai selectat niciun element!"
         End Try
 
+    End Sub
+
+    Private Sub TreeView1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TreeView1.MouseDoubleClick
+        If TreeView1.SelectedNode.Text <> "Mancare" AndAlso TreeView1.SelectedNode.Text <> "Bauturi" Then
+            ListBoxCheck.Items.Add(TreeView1.SelectedNode.Text)
+        End If
     End Sub
 End Class
