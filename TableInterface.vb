@@ -48,7 +48,7 @@ Public Class TableInterface
         MyNode = TreeView1.Nodes.Find("NodeMancare", True)
         Dim sonNode As TreeNode
         Do While line <> Nothing
-            sonNode = MyNode(0).Nodes.Add(line)
+            sonNode = MyNode(0).Nodes.Add(line, line, 1, 1)
             line = MancareReader.ReadLine
         Loop
         MancareReader.Close()
@@ -56,7 +56,7 @@ Public Class TableInterface
         line = BauturaReader.ReadLine
         MyNode = TreeView1.Nodes.Find("NodeBautura", True)
         Do While line <> Nothing
-            sonNode = MyNode(0).Nodes.Add(line)
+            sonNode = MyNode(0).Nodes.Add(line, line, 0, 0)
             line = BauturaReader.ReadLine
         Loop
         Try
