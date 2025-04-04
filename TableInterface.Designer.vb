@@ -34,6 +34,9 @@ Partial Class TableInterface
         TreeView1 = New TreeView()
         ButtonAdaugaM = New Button()
         LabelAlimentNou = New Label()
+        ButtonSterge = New Button()
+        LabelSterge = New Label()
+        LabelEroare = New Label()
         SuspendLayout()
         ' 
         ' ButtonInapoi
@@ -115,11 +118,42 @@ Partial Class TableInterface
         LabelAlimentNou.TabIndex = 30
         LabelAlimentNou.Text = "Aliment nou?"
         ' 
+        ' ButtonSterge
+        ' 
+        ButtonSterge.Location = New Point(425, 362)
+        ButtonSterge.Name = "ButtonSterge"
+        ButtonSterge.Size = New Size(112, 34)
+        ButtonSterge.TabIndex = 31
+        ButtonSterge.Text = "Sterge"
+        ButtonSterge.UseVisualStyleBackColor = True
+        ' 
+        ' LabelSterge
+        ' 
+        LabelSterge.AutoSize = True
+        LabelSterge.Location = New Point(425, 324)
+        LabelSterge.Name = "LabelSterge"
+        LabelSterge.Size = New Size(130, 25)
+        LabelSterge.TabIndex = 32
+        LabelSterge.Text = "Aliment gresit?"
+        ' 
+        ' LabelEroare
+        ' 
+        LabelEroare.AutoSize = True
+        LabelEroare.Location = New Point(259, 416)
+        LabelEroare.Name = "LabelEroare"
+        LabelEroare.Size = New Size(103, 25)
+        LabelEroare.TabIndex = 33
+        LabelEroare.Text = "LabelEroare"
+        LabelEroare.Visible = False
+        ' 
         ' TableInterface
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(600, 450)
+        Controls.Add(LabelEroare)
+        Controls.Add(LabelSterge)
+        Controls.Add(ButtonSterge)
         Controls.Add(LabelAlimentNou)
         Controls.Add(ButtonAdaugaM)
         Controls.Add(TreeView1)
@@ -148,4 +182,7 @@ Partial Class TableInterface
     Friend WithEvents ButtonAdaugaM As Button
     Friend WithEvents ButtonAdaugaB As Button
     Friend WithEvents LabelAlimentNou As Label
+    Friend WithEvents ButtonSterge As Button
+    Friend WithEvents LabelSterge As Label
+    Friend WithEvents LabelEroare As Label
 End Class
