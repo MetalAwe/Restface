@@ -37,6 +37,9 @@ Partial Class TableInterface
         ImageList1 = New ImageList(components)
         ButtonAdaugaM = New Button()
         LabelAlimentNou = New Label()
+        ButtonSterge = New Button()
+        Label1 = New Label()
+        LabelEroare = New Label()
         SuspendLayout()
         ' 
         ' ButtonInapoi
@@ -78,7 +81,7 @@ Partial Class TableInterface
         ButtonPlata.Location = New Point(24, 234)
         ButtonPlata.Margin = New Padding(2)
         ButtonPlata.Name = "ButtonPlata"
-        ButtonPlata.Size = New Size(78, 20)
+        ButtonPlata.Size = New Size(78, 25)
         ButtonPlata.TabIndex = 23
         ButtonPlata.Text = "Plateste"
         ButtonPlata.UseVisualStyleBackColor = True
@@ -124,7 +127,7 @@ Partial Class TableInterface
         ButtonAdaugaM.Location = New Point(181, 217)
         ButtonAdaugaM.Margin = New Padding(2)
         ButtonAdaugaM.Name = "ButtonAdaugaM"
-        ButtonAdaugaM.Size = New Size(78, 20)
+        ButtonAdaugaM.Size = New Size(78, 23)
         ButtonAdaugaM.TabIndex = 28
         ButtonAdaugaM.Text = "Adauga"
         ButtonAdaugaM.UseVisualStyleBackColor = True
@@ -139,11 +142,42 @@ Partial Class TableInterface
         LabelAlimentNou.TabIndex = 30
         LabelAlimentNou.Text = "Aliment nou?"
         ' 
+        ' ButtonSterge
+        ' 
+        ButtonSterge.Location = New Point(293, 217)
+        ButtonSterge.Name = "ButtonSterge"
+        ButtonSterge.Size = New Size(75, 23)
+        ButtonSterge.TabIndex = 31
+        ButtonSterge.Text = "Sterge"
+        ButtonSterge.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(293, 194)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(86, 15)
+        Label1.TabIndex = 32
+        Label1.Text = "Aliment gresit?"
+        ' 
+        ' LabelEroare
+        ' 
+        LabelEroare.AutoSize = True
+        LabelEroare.Location = New Point(183, 248)
+        LabelEroare.Name = "LabelEroare"
+        LabelEroare.Size = New Size(41, 15)
+        LabelEroare.TabIndex = 33
+        LabelEroare.Text = "Label2"
+        LabelEroare.Visible = False
+        ' 
         ' TableInterface
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(420, 270)
+        Controls.Add(LabelEroare)
+        Controls.Add(Label1)
+        Controls.Add(ButtonSterge)
         Controls.Add(LabelAlimentNou)
         Controls.Add(ButtonAdaugaM)
         Controls.Add(TreeView1)
@@ -173,5 +207,8 @@ Partial Class TableInterface
     Friend WithEvents ButtonAdaugaM As Button
     Friend WithEvents ButtonAdaugaB As Button
     Friend WithEvents LabelAlimentNou As Label
-    Friend WithEvents ImageList1 As ImageList
+    Public WithEvents ImageList1 As ImageList
+    Friend WithEvents ButtonSterge As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelEroare As Label
 End Class

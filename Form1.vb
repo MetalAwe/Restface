@@ -29,4 +29,8 @@
             LabelMessage.Visible = True
         End If
     End Sub
+
+    Private Sub LabelLogo_Click(sender As Object, e As EventArgs) Handles LabelLogo.Click
+
+    End Sub
 End Class

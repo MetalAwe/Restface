@@ -22,50 +22,73 @@ Partial Class BonFiscal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        ToolStrip1 = New ToolStrip()
-        ToolStripLabel1 = New ToolStripLabel()
-        ToolStripLabel2 = New ToolStripLabel()
-        ToolStrip1.SuspendLayout()
+        RadioButton5 = New RadioButton()
+        RadioButton10 = New RadioButton()
+        RadioButton15 = New RadioButton()
+        LabelBacsis = New Label()
         SuspendLayout()
         ' 
-        ' ToolStrip1
+        ' RadioButton5
         ' 
-        ToolStrip1.ImageScalingSize = New Size(24, 24)
-        ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripLabel1, ToolStripLabel2})
-        ToolStrip1.Location = New Point(0, 0)
-        ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(800, 30)
-        ToolStrip1.TabIndex = 0
-        ToolStrip1.Text = "ToolStrip1"
+        RadioButton5.AutoSize = True
+        RadioButton5.Location = New Point(29, 183)
+        RadioButton5.Name = "RadioButton5"
+        RadioButton5.Size = New Size(41, 19)
+        RadioButton5.TabIndex = 0
+        RadioButton5.TabStop = True
+        RadioButton5.Text = "5%"
+        RadioButton5.UseVisualStyleBackColor = True
         ' 
-        ' ToolStripLabel1
+        ' RadioButton10
         ' 
-        ToolStripLabel1.Name = "ToolStripLabel1"
-        ToolStripLabel1.Size = New Size(132, 25)
-        ToolStripLabel1.Text = "ToolStripLabel1"
+        RadioButton10.AutoSize = True
+        RadioButton10.Location = New Point(29, 208)
+        RadioButton10.Name = "RadioButton10"
+        RadioButton10.Size = New Size(47, 19)
+        RadioButton10.TabIndex = 1
+        RadioButton10.TabStop = True
+        RadioButton10.Text = "10%"
+        RadioButton10.UseVisualStyleBackColor = True
         ' 
-        ' ToolStripLabel2
+        ' RadioButton15
         ' 
-        ToolStripLabel2.Name = "ToolStripLabel2"
-        ToolStripLabel2.Size = New Size(132, 25)
-        ToolStripLabel2.Text = "ToolStripLabel2"
+        RadioButton15.AutoSize = True
+        RadioButton15.Location = New Point(29, 233)
+        RadioButton15.Name = "RadioButton15"
+        RadioButton15.Size = New Size(47, 19)
+        RadioButton15.TabIndex = 2
+        RadioButton15.TabStop = True
+        RadioButton15.Text = "15%"
+        RadioButton15.UseVisualStyleBackColor = True
+        ' 
+        ' LabelBacsis
+        ' 
+        LabelBacsis.AutoSize = True
+        LabelBacsis.Location = New Point(29, 165)
+        LabelBacsis.Name = "LabelBacsis"
+        LabelBacsis.Size = New Size(39, 15)
+        LabelBacsis.TabIndex = 3
+        LabelBacsis.Text = "Bacsis"
         ' 
         ' BonFiscal
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(ToolStrip1)
+        ClientSize = New Size(560, 270)
+        Controls.Add(LabelBacsis)
+        Controls.Add(RadioButton15)
+        Controls.Add(RadioButton10)
+        Controls.Add(RadioButton5)
+        Margin = New Padding(2)
         Name = "BonFiscal"
         ShowIcon = False
         Text = "Bon Fiscal"
-        ToolStrip1.ResumeLayout(False)
-        ToolStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton10 As RadioButton
+    Friend WithEvents RadioButton15 As RadioButton
+    Friend WithEvents LabelBacsis As Label
 End Class
