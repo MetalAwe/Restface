@@ -24,14 +24,17 @@ Partial Class TableInterface
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim TreeNode1 As TreeNode = New TreeNode("Mancare")
         Dim TreeNode2 As TreeNode = New TreeNode("Bauturi")
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TableInterface))
         ButtonInapoi = New Button()
         RadioButtonCash = New RadioButton()
         RadioButtonCard = New RadioButton()
         ButtonPlata = New Button()
         ListBoxCheck = New ListBox()
         TreeView1 = New TreeView()
+        ImageList1 = New ImageList(components)
         ButtonAdaugaM = New Button()
         LabelAlimentNou = New Label()
         ButtonSterge = New Button()
@@ -41,9 +44,10 @@ Partial Class TableInterface
         ' 
         ' ButtonInapoi
         ' 
-        ButtonInapoi.Location = New Point(35, 12)
+        ButtonInapoi.Location = New Point(24, 7)
+        ButtonInapoi.Margin = New Padding(2)
         ButtonInapoi.Name = "ButtonInapoi"
-        ButtonInapoi.Size = New Size(112, 34)
+        ButtonInapoi.Size = New Size(78, 20)
         ButtonInapoi.TabIndex = 20
         ButtonInapoi.Text = "<< Inapoi"
         ButtonInapoi.UseVisualStyleBackColor = True
@@ -52,9 +56,10 @@ Partial Class TableInterface
         ' 
         RadioButtonCash.AutoSize = True
         RadioButtonCash.Checked = True
-        RadioButtonCash.Location = New Point(35, 320)
+        RadioButtonCash.Location = New Point(24, 192)
+        RadioButtonCash.Margin = New Padding(2)
         RadioButtonCash.Name = "RadioButtonCash"
-        RadioButtonCash.Size = New Size(75, 29)
+        RadioButtonCash.Size = New Size(51, 19)
         RadioButtonCash.TabIndex = 21
         RadioButtonCash.TabStop = True
         RadioButtonCash.Text = "Cash"
@@ -63,18 +68,20 @@ Partial Class TableInterface
         ' RadioButtonCard
         ' 
         RadioButtonCard.AutoSize = True
-        RadioButtonCard.Location = New Point(35, 355)
+        RadioButtonCard.Location = New Point(24, 213)
+        RadioButtonCard.Margin = New Padding(2)
         RadioButtonCard.Name = "RadioButtonCard"
-        RadioButtonCard.Size = New Size(74, 29)
+        RadioButtonCard.Size = New Size(50, 19)
         RadioButtonCard.TabIndex = 22
         RadioButtonCard.Text = "Card"
         RadioButtonCard.UseVisualStyleBackColor = True
         ' 
         ' ButtonPlata
         ' 
-        ButtonPlata.Location = New Point(35, 390)
+        ButtonPlata.Location = New Point(24, 234)
+        ButtonPlata.Margin = New Padding(2)
         ButtonPlata.Name = "ButtonPlata"
-        ButtonPlata.Size = New Size(112, 34)
+        ButtonPlata.Size = New Size(78, 20)
         ButtonPlata.TabIndex = 23
         ButtonPlata.Text = "Plateste"
         ButtonPlata.UseVisualStyleBackColor = True
@@ -82,29 +89,45 @@ Partial Class TableInterface
         ' ListBoxCheck
         ' 
         ListBoxCheck.FormattingEnabled = True
-        ListBoxCheck.ItemHeight = 25
-        ListBoxCheck.Location = New Point(35, 67)
+        ListBoxCheck.ItemHeight = 15
+        ListBoxCheck.Location = New Point(24, 40)
+        ListBoxCheck.Margin = New Padding(2)
         ListBoxCheck.Name = "ListBoxCheck"
-        ListBoxCheck.Size = New Size(180, 229)
+        ListBoxCheck.Size = New Size(127, 139)
         ListBoxCheck.TabIndex = 24
         ' 
         ' TreeView1
         ' 
-        TreeView1.Location = New Point(259, 68)
+        TreeView1.ImageIndex = 0
+        TreeView1.ImageList = ImageList1
+        TreeView1.Location = New Point(181, 41)
+        TreeView1.Margin = New Padding(2)
         TreeView1.Name = "TreeView1"
+        TreeNode1.ImageIndex = 1
         TreeNode1.Name = "NodeMancare"
+        TreeNode1.SelectedImageKey = "food_icon.png"
         TreeNode1.Text = "Mancare"
         TreeNode2.Name = "NodeBautura"
         TreeNode2.Text = "Bauturi"
         TreeView1.Nodes.AddRange(New TreeNode() {TreeNode1, TreeNode2})
-        TreeView1.Size = New Size(296, 228)
+        TreeView1.SelectedImageIndex = 0
+        TreeView1.Size = New Size(208, 138)
         TreeView1.TabIndex = 27
+        ' 
+        ' ImageList1
+        ' 
+        ImageList1.ColorDepth = ColorDepth.Depth32Bit
+        ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), ImageListStreamer)
+        ImageList1.TransparentColor = Color.Transparent
+        ImageList1.Images.SetKeyName(0, "drinks_icon.png")
+        ImageList1.Images.SetKeyName(1, "food_icon.png")
         ' 
         ' ButtonAdaugaM
         ' 
-        ButtonAdaugaM.Location = New Point(259, 362)
+        ButtonAdaugaM.Location = New Point(181, 217)
+        ButtonAdaugaM.Margin = New Padding(2)
         ButtonAdaugaM.Name = "ButtonAdaugaM"
-        ButtonAdaugaM.Size = New Size(112, 34)
+        ButtonAdaugaM.Size = New Size(78, 20)
         ButtonAdaugaM.TabIndex = 28
         ButtonAdaugaM.Text = "Adauga"
         ButtonAdaugaM.UseVisualStyleBackColor = True
@@ -112,9 +135,10 @@ Partial Class TableInterface
         ' LabelAlimentNou
         ' 
         LabelAlimentNou.AutoSize = True
-        LabelAlimentNou.Location = New Point(259, 324)
+        LabelAlimentNou.Location = New Point(181, 194)
+        LabelAlimentNou.Margin = New Padding(2, 0, 2, 0)
         LabelAlimentNou.Name = "LabelAlimentNou"
-        LabelAlimentNou.Size = New Size(117, 25)
+        LabelAlimentNou.Size = New Size(78, 15)
         LabelAlimentNou.TabIndex = 30
         LabelAlimentNou.Text = "Aliment nou?"
         ' 
@@ -148,7 +172,7 @@ Partial Class TableInterface
         ' 
         ' TableInterface
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(600, 450)
         Controls.Add(LabelEroare)
@@ -162,6 +186,7 @@ Partial Class TableInterface
         Controls.Add(RadioButtonCard)
         Controls.Add(RadioButtonCash)
         Controls.Add(ButtonInapoi)
+        Margin = New Padding(2)
         Name = "TableInterface"
         ShowIcon = False
         Text = "Table Interface"
@@ -177,6 +202,7 @@ Partial Class TableInterface
     Friend WithEvents LabelBauturi As Label
     Friend WithEvents LabelMancare As Label
     Friend WithEvents TreeView1 As TreeView
+    Public Property ImageList1 As ImageList
     Public Property PrintDoc As PrintDocument
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents ButtonAdaugaM As Button
