@@ -33,17 +33,19 @@ Partial Class Adauga_Screen
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(74, 234)
+        TextBox1.Location = New Point(52, 140)
+        TextBox1.Margin = New Padding(2)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(150, 31)
+        TextBox1.Size = New Size(106, 23)
         TextBox1.TabIndex = 0
         ' 
         ' RadioBautura
         ' 
         RadioBautura.AutoSize = True
-        RadioBautura.Location = New Point(74, 148)
+        RadioBautura.Location = New Point(52, 89)
+        RadioBautura.Margin = New Padding(2)
         RadioBautura.Name = "RadioBautura"
-        RadioBautura.Size = New Size(97, 29)
+        RadioBautura.Size = New Size(66, 19)
         RadioBautura.TabIndex = 1
         RadioBautura.Text = "Bautura"
         RadioBautura.UseVisualStyleBackColor = True
@@ -52,9 +54,10 @@ Partial Class Adauga_Screen
         ' 
         RadioMancare.AutoSize = True
         RadioMancare.Checked = True
-        RadioMancare.Location = New Point(74, 113)
+        RadioMancare.Location = New Point(52, 68)
+        RadioMancare.Margin = New Padding(2)
         RadioMancare.Name = "RadioMancare"
-        RadioMancare.Size = New Size(104, 29)
+        RadioMancare.Size = New Size(71, 19)
         RadioMancare.TabIndex = 2
         RadioMancare.TabStop = True
         RadioMancare.Text = "Mancare"
@@ -63,44 +66,48 @@ Partial Class Adauga_Screen
         ' LabelTipAliment
         ' 
         LabelTipAliment.AutoSize = True
-        LabelTipAliment.Location = New Point(72, 64)
+        LabelTipAliment.Location = New Point(50, 38)
+        LabelTipAliment.Margin = New Padding(2, 0, 2, 0)
         LabelTipAliment.Name = "LabelTipAliment"
-        LabelTipAliment.Size = New Size(297, 25)
+        LabelTipAliment.Size = New Size(196, 15)
         LabelTipAliment.TabIndex = 3
         LabelTipAliment.Text = "Ce tip de aliment doriti sa adaugati?"
         ' 
         ' LabelNumeAliment
         ' 
         LabelNumeAliment.AutoSize = True
-        LabelNumeAliment.Location = New Point(73, 191)
+        LabelNumeAliment.Location = New Point(51, 115)
+        LabelNumeAliment.Margin = New Padding(2, 0, 2, 0)
         LabelNumeAliment.Name = "LabelNumeAliment"
-        LabelNumeAliment.Size = New Size(229, 25)
+        LabelNumeAliment.Size = New Size(154, 15)
         LabelNumeAliment.TabIndex = 4
         LabelNumeAliment.Text = "Cum se numeste alimentul?"
         ' 
         ' ButtonInapoi
         ' 
-        ButtonInapoi.Location = New Point(12, 12)
+        ButtonInapoi.Location = New Point(8, 7)
+        ButtonInapoi.Margin = New Padding(2)
         ButtonInapoi.Name = "ButtonInapoi"
-        ButtonInapoi.Size = New Size(112, 34)
+        ButtonInapoi.Size = New Size(78, 20)
         ButtonInapoi.TabIndex = 5
         ButtonInapoi.Text = "<< Inapoi"
         ButtonInapoi.UseVisualStyleBackColor = True
         ' 
         ' ButtonAccepta
         ' 
-        ButtonAccepta.Location = New Point(325, 259)
+        ButtonAccepta.Location = New Point(228, 155)
+        ButtonAccepta.Margin = New Padding(2)
         ButtonAccepta.Name = "ButtonAccepta"
-        ButtonAccepta.Size = New Size(112, 34)
+        ButtonAccepta.Size = New Size(78, 20)
         ButtonAccepta.TabIndex = 6
         ButtonAccepta.Text = "Accepta"
         ButtonAccepta.UseVisualStyleBackColor = True
         ' 
         ' Adauga_Screen
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(461, 316)
+        ClientSize = New Size(323, 190)
         Controls.Add(ButtonAccepta)
         Controls.Add(ButtonInapoi)
         Controls.Add(LabelNumeAliment)
@@ -108,8 +115,14 @@ Partial Class Adauga_Screen
         Controls.Add(RadioMancare)
         Controls.Add(RadioBautura)
         Controls.Add(TextBox1)
+        Margin = New Padding(2)
+        MaximizeBox = False
+        MaximumSize = New Size(339, 229)
+        MinimizeBox = False
+        MinimumSize = New Size(339, 229)
         Name = "Adauga_Screen"
         ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Adauga aliment"
         ResumeLayout(False)
         PerformLayout()

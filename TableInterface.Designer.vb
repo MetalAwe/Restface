@@ -38,8 +38,9 @@ Partial Class TableInterface
         ButtonAdaugaM = New Button()
         LabelAlimentNou = New Label()
         ButtonSterge = New Button()
-        LabelSterge = New Label()
+        Label1 = New Label()
         LabelEroare = New Label()
+        LabelNrMasa = New Label()
         SuspendLayout()
         ' 
         ' ButtonInapoi
@@ -81,7 +82,7 @@ Partial Class TableInterface
         ButtonPlata.Location = New Point(24, 234)
         ButtonPlata.Margin = New Padding(2)
         ButtonPlata.Name = "ButtonPlata"
-        ButtonPlata.Size = New Size(78, 20)
+        ButtonPlata.Size = New Size(78, 25)
         ButtonPlata.TabIndex = 23
         ButtonPlata.Text = "Plateste"
         ButtonPlata.UseVisualStyleBackColor = True
@@ -127,7 +128,7 @@ Partial Class TableInterface
         ButtonAdaugaM.Location = New Point(181, 217)
         ButtonAdaugaM.Margin = New Padding(2)
         ButtonAdaugaM.Name = "ButtonAdaugaM"
-        ButtonAdaugaM.Size = New Size(78, 20)
+        ButtonAdaugaM.Size = New Size(78, 23)
         ButtonAdaugaM.TabIndex = 28
         ButtonAdaugaM.Text = "Adauga"
         ButtonAdaugaM.UseVisualStyleBackColor = True
@@ -144,39 +145,49 @@ Partial Class TableInterface
         ' 
         ' ButtonSterge
         ' 
-        ButtonSterge.Location = New Point(425, 362)
+        ButtonSterge.Location = New Point(293, 217)
         ButtonSterge.Name = "ButtonSterge"
-        ButtonSterge.Size = New Size(112, 34)
+        ButtonSterge.Size = New Size(75, 23)
         ButtonSterge.TabIndex = 31
         ButtonSterge.Text = "Sterge"
         ButtonSterge.UseVisualStyleBackColor = True
         ' 
-        ' LabelSterge
+        ' Label1
         ' 
-        LabelSterge.AutoSize = True
-        LabelSterge.Location = New Point(425, 324)
-        LabelSterge.Name = "LabelSterge"
-        LabelSterge.Size = New Size(130, 25)
-        LabelSterge.TabIndex = 32
-        LabelSterge.Text = "Aliment gresit?"
+        Label1.AutoSize = True
+        Label1.Location = New Point(293, 194)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(86, 15)
+        Label1.TabIndex = 32
+        Label1.Text = "Aliment gresit?"
         ' 
         ' LabelEroare
         ' 
         LabelEroare.AutoSize = True
-        LabelEroare.Location = New Point(259, 416)
+        LabelEroare.Location = New Point(183, 248)
         LabelEroare.Name = "LabelEroare"
-        LabelEroare.Size = New Size(103, 25)
+        LabelEroare.Size = New Size(41, 15)
         LabelEroare.TabIndex = 33
-        LabelEroare.Text = "LabelEroare"
+        LabelEroare.Text = "Label2"
         LabelEroare.Visible = False
+        ' 
+        ' LabelNrMasa
+        ' 
+        LabelNrMasa.AutoSize = True
+        LabelNrMasa.Location = New Point(181, 10)
+        LabelNrMasa.Name = "LabelNrMasa"
+        LabelNrMasa.Size = New Size(38, 15)
+        LabelNrMasa.TabIndex = 34
+        LabelNrMasa.Text = "Masa:"
         ' 
         ' TableInterface
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(600, 450)
+        ClientSize = New Size(420, 270)
+        Controls.Add(LabelNrMasa)
         Controls.Add(LabelEroare)
-        Controls.Add(LabelSterge)
+        Controls.Add(Label1)
         Controls.Add(ButtonSterge)
         Controls.Add(LabelAlimentNou)
         Controls.Add(ButtonAdaugaM)
@@ -187,8 +198,13 @@ Partial Class TableInterface
         Controls.Add(RadioButtonCash)
         Controls.Add(ButtonInapoi)
         Margin = New Padding(2)
+        MaximizeBox = False
+        MaximumSize = New Size(436, 309)
+        MinimizeBox = False
+        MinimumSize = New Size(436, 309)
         Name = "TableInterface"
         ShowIcon = False
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Table Interface"
         ResumeLayout(False)
         PerformLayout()
@@ -202,13 +218,14 @@ Partial Class TableInterface
     Friend WithEvents LabelBauturi As Label
     Friend WithEvents LabelMancare As Label
     Friend WithEvents TreeView1 As TreeView
-    Public Property ImageList1 As ImageList
     Public Property PrintDoc As PrintDocument
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents ButtonAdaugaM As Button
     Friend WithEvents ButtonAdaugaB As Button
     Friend WithEvents LabelAlimentNou As Label
+    Public WithEvents ImageList1 As ImageList
     Friend WithEvents ButtonSterge As Button
-    Friend WithEvents LabelSterge As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents LabelEroare As Label
+    Friend WithEvents LabelNrMasa As Label
 End Class

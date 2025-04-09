@@ -22,106 +22,64 @@ Partial Class BonFiscal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Radio5lasuta = New RadioButton()
-        Radio10lasuta = New RadioButton()
-        Radio15lasuta = New RadioButton()
+        RadioButton5 = New RadioButton()
+        RadioButton10 = New RadioButton()
+        RadioButton15 = New RadioButton()
         LabelBacsis = New Label()
-        ListBox1 = New ListBox()
-        TextBoxMetodaPlata = New TextBox()
-        LabelMetodaPlata = New Label()
-        ButtonPlateste = New Button()
         SuspendLayout()
         ' 
-        ' Radio5lasuta
+        ' RadioButton5
         ' 
-        Radio5lasuta.AutoSize = True
-        Radio5lasuta.Location = New Point(71, 318)
-        Radio5lasuta.Name = "Radio5lasuta"
-        Radio5lasuta.Size = New Size(62, 29)
-        Radio5lasuta.TabIndex = 0
-        Radio5lasuta.Text = "5%"
-        Radio5lasuta.UseVisualStyleBackColor = True
+        RadioButton5.AutoSize = True
+        RadioButton5.Location = New Point(29, 183)
+        RadioButton5.Name = "RadioButton5"
+        RadioButton5.Size = New Size(41, 19)
+        RadioButton5.TabIndex = 0
+        RadioButton5.TabStop = True
+        RadioButton5.Text = "5%"
+        RadioButton5.UseVisualStyleBackColor = True
         ' 
-        ' Radio10lasuta
+        ' RadioButton10
         ' 
-        Radio10lasuta.AutoSize = True
-        Radio10lasuta.Checked = True
-        Radio10lasuta.Location = New Point(71, 353)
-        Radio10lasuta.Name = "Radio10lasuta"
-        Radio10lasuta.Size = New Size(72, 29)
-        Radio10lasuta.TabIndex = 1
-        Radio10lasuta.TabStop = True
-        Radio10lasuta.Text = "10%"
-        Radio10lasuta.UseVisualStyleBackColor = True
+        RadioButton10.AutoSize = True
+        RadioButton10.Location = New Point(29, 208)
+        RadioButton10.Name = "RadioButton10"
+        RadioButton10.Size = New Size(47, 19)
+        RadioButton10.TabIndex = 1
+        RadioButton10.TabStop = True
+        RadioButton10.Text = "10%"
+        RadioButton10.UseVisualStyleBackColor = True
         ' 
-        ' Radio15lasuta
+        ' RadioButton15
         ' 
-        Radio15lasuta.AutoSize = True
-        Radio15lasuta.Location = New Point(71, 388)
-        Radio15lasuta.Name = "Radio15lasuta"
-        Radio15lasuta.Size = New Size(72, 29)
-        Radio15lasuta.TabIndex = 2
-        Radio15lasuta.Text = "15%"
-        Radio15lasuta.UseVisualStyleBackColor = True
+        RadioButton15.AutoSize = True
+        RadioButton15.Location = New Point(29, 233)
+        RadioButton15.Name = "RadioButton15"
+        RadioButton15.Size = New Size(47, 19)
+        RadioButton15.TabIndex = 2
+        RadioButton15.TabStop = True
+        RadioButton15.Text = "15%"
+        RadioButton15.UseVisualStyleBackColor = True
         ' 
         ' LabelBacsis
         ' 
         LabelBacsis.AutoSize = True
-        LabelBacsis.Location = New Point(71, 290)
+        LabelBacsis.Location = New Point(29, 165)
         LabelBacsis.Name = "LabelBacsis"
-        LabelBacsis.Size = New Size(59, 25)
+        LabelBacsis.Size = New Size(39, 15)
         LabelBacsis.TabIndex = 3
         LabelBacsis.Text = "Bacsis"
         ' 
-        ' ListBox1
-        ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 25
-        ListBox1.Location = New Point(306, 53)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(433, 354)
-        ListBox1.TabIndex = 4
-        ' 
-        ' TextBoxMetodaPlata
-        ' 
-        TextBoxMetodaPlata.Enabled = False
-        TextBoxMetodaPlata.Location = New Point(71, 128)
-        TextBoxMetodaPlata.Name = "TextBoxMetodaPlata"
-        TextBoxMetodaPlata.Size = New Size(129, 31)
-        TextBoxMetodaPlata.TabIndex = 5
-        TextBoxMetodaPlata.Text = "card"
-        ' 
-        ' LabelMetodaPlata
-        ' 
-        LabelMetodaPlata.AutoSize = True
-        LabelMetodaPlata.Location = New Point(71, 100)
-        LabelMetodaPlata.Name = "LabelMetodaPlata"
-        LabelMetodaPlata.Size = New Size(117, 25)
-        LabelMetodaPlata.TabIndex = 6
-        LabelMetodaPlata.Text = "Metoda Plata"
-        ' 
-        ' ButtonPlateste
-        ' 
-        ButtonPlateste.Location = New Point(169, 353)
-        ButtonPlateste.Name = "ButtonPlateste"
-        ButtonPlateste.Size = New Size(112, 34)
-        ButtonPlateste.TabIndex = 7
-        ButtonPlateste.Text = "Plateste"
-        ButtonPlateste.UseVisualStyleBackColor = True
-        ' 
         ' BonFiscal
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(ButtonPlateste)
-        Controls.Add(LabelMetodaPlata)
-        Controls.Add(TextBoxMetodaPlata)
-        Controls.Add(ListBox1)
+        ClientSize = New Size(560, 270)
         Controls.Add(LabelBacsis)
-        Controls.Add(Radio15lasuta)
-        Controls.Add(Radio10lasuta)
-        Controls.Add(Radio5lasuta)
+        Controls.Add(RadioButton15)
+        Controls.Add(RadioButton10)
+        Controls.Add(RadioButton5)
+        Margin = New Padding(2)
         Name = "BonFiscal"
         ShowIcon = False
         Text = "Bon Fiscal"
@@ -129,12 +87,8 @@ Partial Class BonFiscal
         PerformLayout()
     End Sub
 
-    Friend WithEvents Radio5lasuta As RadioButton
-    Friend WithEvents Radio10lasuta As RadioButton
-    Friend WithEvents Radio15lasuta As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton10 As RadioButton
+    Friend WithEvents RadioButton15 As RadioButton
     Friend WithEvents LabelBacsis As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents TextBoxMetodaPlata As TextBox
-    Friend WithEvents LabelMetodaPlata As Label
-    Friend WithEvents ButtonPlateste As Button
 End Class

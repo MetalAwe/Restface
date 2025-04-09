@@ -8,7 +8,6 @@ Public Class Adauga_Screen
         TableInterface.Show()
     End Sub
     Private Sub ButtonAccepta_Click(sender As Object, e As EventArgs) Handles ButtonAccepta.Click
-        Dim line As String
         Dim filepath As String
         If (RadioBautura.Checked) Then
             filepath = "bautura.txt"
